@@ -14,24 +14,30 @@ def multiplyList(l) -> int:
         product  *= ele
     return product 
 
-# get numbers 
-inputStr = input("enter number separted by spaced end with enter: ")
-splitInput = inputStr.split()
-intList = []
+def reverseList(l):
+    return l[::-1]
 
-# cast to ints
-for s in splitInput:
-    try:
-        num = int(s) 
-        intList.append(num)  
-    except ValueError:
-        print(f"Cannot convert '{s}' to an integer. Skipping...")
+def main():
+    # get numbers 
+    inputStr = input("enter number separted by spaced end with enter: ")
+    splitInput = inputStr.split()
+    intList = []
 
-# call functions
-sumOfList = sumList(intList)
-productOfList = multiplyList(intList)
+    # cast to ints
+    for s in splitInput:
+        try:
+            num = int(s) 
+            intList.append(num)  
+        except ValueError:
+            print(f"Cannot convert '{s}' to an integer. Skipping...")
 
-# print
-print("sum", sumOfList)
-print("product", productOfList)
+    # call functions
+    sumOfList = sumList(intList)
+    productOfList = multiplyList(intList)
 
+    # print
+    print("sum", sumOfList)
+    print("product", productOfList)
+
+if __name__ == "__main__":
+    main()
