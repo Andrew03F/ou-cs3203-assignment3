@@ -34,10 +34,12 @@ def main():
     # call functions
     sumOfList = sumList(intList)
     productOfList = multiplyList(intList)
+    reversedList = reverseList(intList)
 
     # print
-    print("sum", sumOfList)
-    print("product", productOfList)
+    print("sum:", sumOfList)
+    print("product: ", productOfList)
+    print ("reverse: ", reversedList)
 
 if __name__ == "__main__":
     main()
